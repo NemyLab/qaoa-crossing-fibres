@@ -45,8 +45,12 @@ The human-data workflow uses HCP-YA data obtained under the WU-Minn HCP Open Acc
 
 ## Citation
 
-See `CITATION.cff`. Replace the manuscript status/DOI in that file after publication or Zenodo archiving.
+If you use this code, synthetic data, or associated reproducibility materials, please cite the accompanying manuscript:
+
+Nemy, M., Ferreira, D., & Sivic, J. Hardware-aware QAOA for crossing-fibre reconstruction in diffusion MRI. Manuscript in preparation.
 
 ## License
 
-A software license has deliberately not been assigned in this prepared bundle. Before making the repository public, add the license approved by the laboratory/institutions (for example MIT or BSD-3-Clause if appropriate). HCP data-use conditions are separate from any software license.
+The source code in this repository is released under the MIT License.
+
+The repository contains only publicly redistributable code, synthetic phantom data, and derived numerical results. Human Connectome Project Young Adult (HCP-YA) participant-level data and subject-derived files are not redistributed here. Access to the original HCP-YA data is subject to the WU–Minn HCP Data Use Terms.
