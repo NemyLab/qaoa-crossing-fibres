@@ -41,7 +41,9 @@ The repository preserves scripts for the IBM Heron (`ibm_aachen`) and Nighthawk 
 
 ## Human Connectome Project data
 
-The human-data workflow uses HCP-YA data obtained under the WU-Minn HCP Open Access Data Use Terms. This public repository includes code only for the HCP workflow, not subject-level HCP-derived graph tables, bitstrings or participant-level outputs. See `docs/HCP_REPRODUCTION.md`.
+The human-data workflow uses HCP-YA data obtained under the WU-Minn HCP Open Access Data Use Terms. The exact HCP-YA subjects and diffusion-grid patch centres used in the 30-subject analysis are listed in [`data/hcp/hcp_patch_manifest.csv`](data/hcp/hcp_patch_manifest.csv). The representative case used in the manuscript is subject 103414, with the 5×5 patch centred at diffusion-grid voxel (88, 86, 76).
+
+This public repository does not redistribute HCP imaging data, subject-level HCP-derived graph tables, bitstrings or participant-level outputs. See [`docs/HCP_REPRODUCTION.md`](docs/HCP_REPRODUCTION.md) for reproduction instructions.
 
 ## Citation
 
