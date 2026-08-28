@@ -1,0 +1,40 @@
+{
+  "selection_scope": "training graph seed 2000 only",
+  "selection_rule": "minimum unweighted mean normalized best gap across the six predefined budgets; ties by mean gap at budgets <=500, then wall time",
+  "training_seed": 2000,
+  "budgets": [
+    100,
+    256,
+    500,
+    1000,
+    2000,
+    5000
+  ],
+  "repeats_per_budget_configuration": 50,
+  "n_configurations": 48,
+  "selected_config_index": 8,
+  "selected_restarts": 1,
+  "selected_t_start_multiplier": 1.0,
+  "selected_t_end_multiplier": 0.05,
+  "selected_primary_score": 0.20010899260487522,
+  "selected_low_budget_score": 0.2537609655350999,
+  "exact_energy": -35.71766853039656,
+  "exact_milp_wall_seconds": 0.015685707912780344,
+  "graph_diagnostics": {
+    "mean_peak_error_deg": 7.159999999999949,
+    "mean_maximum_peak_error_deg": 11.039999999999958,
+    "mean_nnls_residual_norm": 0.6713257931915076,
+    "mean_true_crossing_angle_deg": 76.24,
+    "minimum_true_crossing_angle_deg": 57.99999999999999,
+    "correct_continuation_fraction": 0.9523809523809523,
+    "n_connected_components_proxy": NaN
+  },
+  "solver_info": {
+    "solver_status": 0,
+    "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "mip_gap": 0.0,
+    "mip_node_count": 1
+  },
+  "elapsed_wall_seconds": 36.166228082962334,
+  "warning": "The selected SA configuration is frozen before evaluation on seeds 2001-2015. Do not retune using held-out results."
+}

@@ -1,0 +1,42 @@
+{
+  "strategy": "hardware_calibrated",
+  "seeds": [
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+  ],
+  "independent_unit": "randomized phantom seed",
+  "shots_are_independent_units": false,
+  "factorial_design": {
+    "crossing_angle": [
+      "90_deg",
+      "60_deg"
+    ],
+    "orientation": [
+      "original",
+      "rotated_45_deg"
+    ]
+  },
+  "test": "two-sided exact sign-flip permutation test of paired mean contrast",
+  "number_of_exact_sign_patterns": 32768,
+  "bootstrap_repetitions": 100000,
+  "bootstrap_random_seed": 20260718,
+  "multiplicity": {
+    "preferred": "Holm correction across three factorial effects within each metric",
+    "also_exported": "Holm correction across all factorial tests"
+  },
+  "primary_endpoint": "Panel C: cvar10_normalized_gap",
+  "secondary_endpoint_warning": "Panel D is shot-count-dependent because it uses the best observed bitstring."
+}

@@ -1,0 +1,43 @@
+{
+  "design": {
+    "seeds": [
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015
+    ],
+    "n_seeds": 15,
+    "budgets": [
+      100,
+      256,
+      500,
+      1000,
+      2000,
+      5000
+    ],
+    "repeats_per_seed_budget_method": 100,
+    "sa_restarts": 4,
+    "random_seed": 17012026,
+    "budget_definition": "One QPU shot or one classical objective/delta query counts as one algorithmic evaluation. This normalizes candidate-query budget, not wall-clock time, monetary cost, or physical resource use.",
+    "qpu_sampling": "bootstrap draws from observed hardware empirical distributions",
+    "greedy": "budgeted random-restart best-improvement one-spin descent",
+    "simulated_annealing": "fixed geometric schedule with graph-scaled temperature"
+  },
+  "elapsed_wall_seconds": 262.6655858339509,
+  "main_output_files": [
+    "control_results_by_seed_budget.csv",
+    "control_aggregate.csv",
+    "qpu_vs_classical_paired.csv"
+  ]
+}

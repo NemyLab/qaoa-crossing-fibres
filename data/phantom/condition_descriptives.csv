@@ -1,0 +1,17 @@
+panel,metric,metric_label,condition_key,n_seeds,mean,sd,median,minimum,maximum
+A,exact_solution_label_accuracy,Exact MILP label accuracy,90_original,15,0.9866666666666667,0.01951800145897068,1.0,0.96,1.0
+A,exact_solution_label_accuracy,Exact MILP label accuracy,90_rotated,15,0.9760000000000002,0.03641035959331198,1.0,0.88,1.0
+A,exact_solution_label_accuracy,Exact MILP label accuracy,60_original,15,0.9146666666666666,0.1140091892704059,0.96,0.52,1.0
+A,exact_solution_label_accuracy,Exact MILP label accuracy,60_rotated,15,0.9226666666666666,0.06496885700820339,0.96,0.8,1.0
+B,ideal_expected_normalized_gap,Ideal QAOA expected normalized gap,90_original,15,0.3491425432415594,0.02370676801096988,0.3518510513208953,0.3056738169793984,0.397069740901499
+B,ideal_expected_normalized_gap,Ideal QAOA expected normalized gap,90_rotated,15,0.3616098383899405,0.017868239779329383,0.3613930552934837,0.3338400202418606,0.3966484576939728
+B,ideal_expected_normalized_gap,Ideal QAOA expected normalized gap,60_original,15,0.31552678847983884,0.021291933356740116,0.3193611877227369,0.2803471497872489,0.3500349891553259
+B,ideal_expected_normalized_gap,Ideal QAOA expected normalized gap,60_rotated,15,0.3300666390983914,0.02312795293959794,0.3412493097166862,0.2868185648211502,0.3639710881355907
+C,cvar10_normalized_gap,QPU CVaR10 normalized gap,90_original,15,0.28965933459121124,0.023588582162603944,0.2891082708158161,0.2463277796863078,0.3275758389109862
+C,cvar10_normalized_gap,QPU CVaR10 normalized gap,90_rotated,15,0.28586242169184917,0.02536236985151703,0.28041035713126,0.2384227858449353,0.3437976695184548
+C,cvar10_normalized_gap,QPU CVaR10 normalized gap,60_original,15,0.24576275050496182,0.020421308444213963,0.2436215290988198,0.2084982768453645,0.291153367900396
+C,cvar10_normalized_gap,QPU CVaR10 normalized gap,60_rotated,15,0.2567986313622252,0.01585731840282091,0.2597082414805675,0.2285862130570437,0.2875433822226269
+D,best_agreement_with_exact,Best QPU assignment agreement with exact MILP,90_original,15,0.6960000000000001,0.10119288512538814,0.68,0.52,0.84
+D,best_agreement_with_exact,Best QPU assignment agreement with exact MILP,90_rotated,15,0.672,0.09585703640615761,0.68,0.52,0.84
+D,best_agreement_with_exact,Best QPU assignment agreement with exact MILP,60_original,15,0.696,0.08253137931374085,0.72,0.52,0.8
+D,best_agreement_with_exact,Best QPU assignment agreement with exact MILP,60_rotated,15,0.6906666666666667,0.079234432149762,0.68,0.6,0.84
