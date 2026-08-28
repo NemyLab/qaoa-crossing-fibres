@@ -106,7 +106,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--seed",
         type=int,
-        default=100307,
+        default=0,
         help="Metadata seed; no stochastic graph construction is used.",
     )
     return parser.parse_args()

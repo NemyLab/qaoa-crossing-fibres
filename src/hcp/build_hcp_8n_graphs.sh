@@ -9,12 +9,12 @@ HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="${PROJECT_ROOT:-$PWD}"
 BUILDER="${BUILDER:-${PROJECT_ROOT}/07_build_real_crossing_graph.py}"
 
-SOURCE_REP_ROOT="${SOURCE_REP_ROOT:-${PROJECT_ROOT}/real_data/HCP_100307_R_89_89_80}"
+SOURCE_REP_ROOT="${SOURCE_REP_ROOT:-${PROJECT_ROOT}/real_data_replication/103414_R_88_86_76}"
 SOURCE_30_ROOT="${SOURCE_30_ROOT:-${PROJECT_ROOT}/real_data_replication}"
-OUT_REP_ROOT="${OUT_REP_ROOT:-${PROJECT_ROOT}/real_data_8n/HCP_100307_R_89_89_80}"
+OUT_REP_ROOT="${OUT_REP_ROOT:-${PROJECT_ROOT}/real_data_8n/103414_R_88_86_76}"
 OUT_30_ROOT="${OUT_30_ROOT:-${PROJECT_ROOT}/real_data_8n_replication}"
 VALIDATION_OUT="${VALIDATION_OUT:-${PROJECT_ROOT}/hcp_8n_graph_validation}"
-MANIFEST="${MANIFEST:-${HERE}/hcp_30_patch_ids.txt}"
+MANIFEST="${MANIFEST:-${PROJECT_ROOT}/data/hcp/hcp_patch_manifest.csv}"
 FORCE="${FORCE:-0}"
 
 prepare_output_dir() {
@@ -105,8 +105,9 @@ patch_ids=()
 if [[ "${mapfile_supported}" == "1" ]]; then
     mapfile -t patch_ids < <(grep -Ev '^[[:space:]]*(#|$)' "${MANIFEST}")
 else
-    while IFS= read -r patch_id; do
-        [[ -n "${patch_id}" && "${patch_id}" != \#* ]] && patch_ids+=("${patch_id}")
+    while IFS=, read -r case_index hcp_subject_id patch_id patch_label center_x center_y center_z; do
+        [[ "${case_index}" == "case_index" ]] && continue
+        [[ -n "${patch_id}" ]] && patch_ids+=("${patch_id}")
     done < "${MANIFEST}"
 fi
 
@@ -134,7 +135,7 @@ prepare_output_dir "${OUT_30_ROOT}"
 prepare_output_dir "${VALIDATION_OUT}"
 
 build_one \
-    "HCP_100307_R_89_89_80" \
+    "103414_R_88_86_76" \
     "${representative_patch_file}" \
     "${OUT_REP_ROOT}/graph_validation"
 

@@ -176,7 +176,7 @@ def load_real_graph(graph_dir: Path) -> tuple[CrossingGraph, NodeGeometry, dict[
         fields=fields_rcm,
         true_spins=true_spins_rcm,
         grid_size=5,
-        seed=100307,
+        seed=103414,
     )
     if graph.n_nodes != 50:
         raise RuntimeError(f"Expected 50 nodes, found {graph.n_nodes}")
@@ -1109,16 +1109,13 @@ def main() -> None:
         "--graph-dir",
         type=Path,
         default=Path(
-            "real_data/HCP_100307_R_89_89_80/graph_validation"
+            "real_data_8n_replication/103414_R_88_86_76/graph_validation"
         ),
     )
     parser.add_argument(
         "--hardware-dir",
         type=Path,
-        default=Path(
-            "real_data/HCP_100307_R_89_89_80/"
-            "hardware_results_fractional"
-        ),
+        default=Path("representative_103414_hardware_for_figure"),
     )
     parser.add_argument(
         "--mrview-screenshot",
@@ -1137,7 +1134,7 @@ def main() -> None:
     )
     parser.add_argument("--uniform-samples", type=int, default=10000)
     parser.add_argument("--uniform-seed", type=int, default=800307)
-    parser.add_argument("--subject-label", default="HCP subject 100307")
+    parser.add_argument("--subject-label", default="HCP subject 103414")
     parser.add_argument(
         "--patch-label",
         default="right CST 5×5 crossing-fibre patch",

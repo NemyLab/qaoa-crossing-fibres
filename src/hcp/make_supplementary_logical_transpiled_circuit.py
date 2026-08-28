@@ -10,8 +10,8 @@ IBM Quantum can optionally replace either generated panel.
 Example
 -------
 python make_supplementary_logical_transpiled_circuit.py \
-  --qpy real_data/HCP_100307_R_89_89_80/qpu_fractional_preflight/real_fractional_bound_folded.qpy \
-  --metadata real_data/HCP_100307_R_89_89_80/qpu_fractional_preflight/real_fractional_preflight_validation.json \
+  --qpy real_data_8n_replication/103414_R_88_86_76/heron_preflight/real_qpu_hardware_calibrated_best.qpy \
+  --metadata real_data_8n_replication/103414_R_88_86_76/heron_preflight/real_qpu_preflight.json \
   --outdir paper_figures_supplementary_circuit
 
 The first circuit in the QPY is used by default. According to the submission

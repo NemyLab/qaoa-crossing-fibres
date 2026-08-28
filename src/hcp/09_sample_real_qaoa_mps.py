@@ -160,7 +160,7 @@ def load_saved_graph(graph_dir: Path) -> tuple[CrossingGraph, dict[str, np.ndarr
         fields=fields_rcm,
         true_spins=true_spins_rcm,
         grid_size=5,
-        seed=100307,
+        seed=0,
     )
     if graph.n_nodes != 50:
         raise ValueError(f"Expected 50 nodes, found {graph.n_nodes}")

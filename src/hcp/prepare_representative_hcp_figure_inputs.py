@@ -33,11 +33,11 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         default=Path("real_heron_8n_hardware/real_heron_best_assignments.npz"),
     )
-    parser.add_argument("--patch-id", default="102513_R_92_90_78")
+    parser.add_argument("--patch-id", default="103414_R_88_86_76")
     parser.add_argument(
         "--out",
         type=Path,
-        default=Path("representative_102513_hardware_for_figure"),
+        default=Path("representative_103414_hardware_for_figure"),
     )
     return parser.parse_args()
 

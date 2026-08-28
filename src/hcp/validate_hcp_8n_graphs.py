@@ -40,7 +40,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--manifest",
         type=Path,
-        default=Path(__file__).with_name("hcp_30_patch_ids.txt"),
+        default=Path(__file__).parents[2] / "data" / "hcp" / "hcp_patch_manifest.csv",
     )
     parser.add_argument("--out", type=Path, required=True)
     return parser.parse_args()
@@ -49,15 +49,19 @@ def parse_args() -> argparse.Namespace:
 def load_manifest(path: Path) -> list[str]:
     if not path.is_file():
         raise FileNotFoundError(path)
-    values = [
-        line.strip()
-        for line in path.read_text(encoding="utf-8").splitlines()
-        if line.strip() and not line.lstrip().startswith("#")
-    ]
+
+    frame = pd.read_csv(path)
+
+    if "patch_id" not in frame.columns:
+        raise ValueError(f"{path} does not contain a 'patch_id' column")
+
+    values = frame["patch_id"].astype(str).tolist()
+
     if len(values) != 30 or len(set(values)) != 30:
         raise ValueError(
             f"Expected 30 unique patch identifiers in {path}; found {len(values)}"
         )
+
     return values
 
 
@@ -218,11 +222,11 @@ def main() -> None:
     failures: dict[str, list[str]] = {}
 
     representative_row, representative_errors = check_graph(
-        "HCP_100307_R_89_89_80", args.representative
+        "103414_R_88_86_76", args.representative
     )
     rows.append(representative_row)
     if representative_errors:
-        failures["HCP_100307_R_89_89_80"] = representative_errors
+        failures["103414_R_88_86_76"] = representative_errors
 
     observed_dirs = {
         path.parent.name
