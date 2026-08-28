@@ -8,4 +8,3 @@ For that reason this public GitHub package does **not** redistribute the HCP MRI
 
 The manuscript workflow uses 5×5 coronal patches, two retained candidate orientations per voxel, eight-neighbour voxel connectivity, global degree pruning to maximum node degree 3, exact MILP optimization, noiseless MPS sampling and raw SamplerV2 hardware sampling. The representative manuscript example is HCP subject 103414 at diffusion-grid centre (88, 86, 76).
 
-A separate private curation archive was prepared alongside this repository from the project Drive. It contains the validated 30-subject hardware outputs and representative graph tables for internal preservation and controlled sharing only. Do not copy that archive into a public GitHub repository without confirming that the distribution mechanism requires recipients to accept the HCP terms.
