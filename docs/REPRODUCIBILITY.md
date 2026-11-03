@@ -19,3 +19,11 @@ The public source tables are in `data/phantom/`. `analyze_phantom_factorial_stat
 ## HCP-YA
 
 The validated eight-neighbour graph builder/validator and HCP analysis scripts are in `src/hcp/`. See `HCP_REPRODUCTION.md` for the data-access boundary. HCP participant-level derived outputs are not part of the public GitHub bundle.
+
+## Module search path
+
+Scripts import sibling modules across `src/` subfolders (for example, the hardware workflows import `step5_curved_signal_graph` and `step9_common`). Run them with all source folders on the path:
+
+```bash
+export PYTHONPATH="$PWD/src/phantom:$PWD/src/qaoa:$PWD/src/classical:$PWD/src/hardware/heron:$PWD/src/hcp"
+```

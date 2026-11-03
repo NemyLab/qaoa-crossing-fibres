@@ -6,3 +6,6 @@ networkx>=3.2
 pytest>=8.0
 qiskit~=2.4.0
 qiskit-aer~=0.17
+statsmodels>=0.14
+# optional: gurobipy (only for solve_gurobi in src/phantom/step1_crossing_graph.py; all manuscript results use scipy.optimize.milp/HiGHS)
+# hardware only: qiskit-ibm-runtime==0.48.0

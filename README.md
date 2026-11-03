@@ -18,7 +18,9 @@ This repository contains the code used to construct the crossing-fibre Ising pro
 - `src/hcp/` – HCP graph construction, validation, MPS/QPU analysis and figure scripts. These scripts require locally obtained HCP data.
 - `data/phantom/` – public synthetic-phantom numerical outputs underlying the manuscript analyses.
 - `data/classical/` – per-seed/per-budget classical-control outputs and frozen SA configuration.
-- `docs/` – reproduction notes, curation notes and source provenance.
+- `docs/` – reproduction notes.
+- `analysis/` – table verification and classical-only supplementary analyses (non-spatial baselines, higher-curvature phantoms); see `analysis/README.md`.
+- `tests/` – fast smoke tests (`pytest -q`), including a check that the regenerated phantoms reproduce published values.
 
 ## Software environment
 
@@ -35,9 +37,20 @@ pip install qiskit-ibm-runtime==0.48.0
 
 The manuscript evaluation uses four paired phantom conditions (90° and 60° crossing angles, each in original and globally 45°-rotated orientation). Seed 2000 is reserved for calibration/tuning; seeds 2001–2015 are held out for evaluation. The generators in `src/phantom/` reconstruct the deterministic instance geometry and noise realizations described in the Methods.
 
+## Quick check
+
+```bash
+pip install -r requirements.txt
+pytest -q
+```
+
+The tests import the offline modules and confirm that phantom seed 2001 (90°, original orientation) reproduces the published MILP–phantom label agreement and the Heron ideal expected normalized gap.
+
 ## Hardware results
 
 The repository preserves scripts for the IBM Heron (`ibm_aachen`) and Nighthawk (`ibm_berlin`) workflows. Re-running on current hardware will not reproduce historical calibration states exactly. Hardware job outputs should therefore be interpreted together with the archived manuscript results/DOI release rather than as deterministic unit tests. No IBM credentials are stored in this repository.
+
+Known gaps: raw phantom QPU bitstrings, transpiled circuits (QPY) and backend calibration snapshots are not yet included; they are planned for the versioned Zenodo archive. `src/phantom/compare_heron_nighthawk_phantoms_with_pvalues.py` imports `compare_heron_nighthawk_phantoms.py`, which is not yet included; `analysis/verify_phantom_tables.py` reproduces the same paired tests from the public table. `src/hardware/heron/step10_transpile_preflight.py` currently contains only the helper metrics imported by the replication workflow.
 
 ## Human Connectome Project data
 
