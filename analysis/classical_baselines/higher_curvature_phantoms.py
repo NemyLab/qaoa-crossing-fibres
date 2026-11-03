@@ -1,16 +1,9 @@
 import sys, numpy as np, pandas as pd
-sys.path.insert(0, sys.argv[1])
+sys.path.insert(0, sys.argv[1]); sys.path.insert(0, __import__('os').path.dirname(__file__))
+from nonspatial import two_means_labels
 import step5_curved_signal_graph as s5
 def sinv(a,b): m=(a==b).mean(); return max(m,1-m)
-def two_means(df):
-    ang=np.arctan2(df.dir_y,df.dir_x)%np.pi; z=np.exp(2j*ang); c=[z[0],-z[0]]
-    for _ in range(50):
-        lab=np.abs(z-c[0])<np.abs(z-c[1]); c=[z[lab].mean() if lab.any() else c[0], z[~lab].mean() if (~lab).any() else c[1]]
-    out=np.empty(len(df),int)
-    for _,idx in df.groupby(['row','col']).groups.items():
-        i,j=list(idx); di=abs(z[i]-c[0])-abs(z[i]-c[1]); dj=abs(z[j]-c[0])-abs(z[j]-c[1])
-        out[i],out[j]=(1,-1) if di<dj else (-1,1)
-    return out
+two_means=two_means_labels
 rows=[]
 for curv in [20,30,40,50,60]:
     for base,name in [((0,90),'90'),((15,75),'60')]:

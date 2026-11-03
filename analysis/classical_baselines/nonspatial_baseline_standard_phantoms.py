@@ -1,5 +1,6 @@
 import sys, numpy as np, pandas as pd
-sys.path.insert(0, sys.argv[1])
+sys.path.insert(0, sys.argv[1]); sys.path.insert(0, __import__('os').path.dirname(__file__))
+from nonspatial import two_means_labels
 from step5_curved_signal_graph import build_curved_signal_graph, exact_milp
 def sinv(a,b): m=(a==b).mean(); return max(m,1-m)
 rows=[]
@@ -10,21 +11,7 @@ for geom in ['curved_90','curved_90_rot45','curved_60','curved_60_rot45']:
         nodes=g.nodes if hasattr(g,'nodes') else None
         df=nodes if isinstance(nodes,pd.DataFrame) else pd.DataFrame(nodes)
         truth=df['true_spin'].to_numpy()
-        # trivial: 2-means on axis angle (doubled-angle representation), per-voxel assignment respecting conflict
-        ang=np.arctan2(df.dir_y,df.dir_x)%np.pi
-        z=np.exp(2j*ang)
-        # global mean axis of first peaks vs second: cluster via doubled angle k-means
-        c=[z[0],-z[0]]
-        for _ in range(50):
-            lab=np.where(np.abs(z-c[0])<np.abs(z-c[1]),1,-1)
-            c=[z[lab==1].mean() if (lab==1).any() else c[0], z[lab==-1].mean() if (lab==-1).any() else c[1]]
-        # enforce one per voxel: within each voxel, assign peak closer to cluster 0 as +1
-        triv=np.empty(len(df),int)
-        for (r,cc),idx in df.groupby(['row','col']).groups.items():
-            idx=list(idx); i,j=idx
-            di=abs(z[i]-c[0])-abs(z[i]-c[1]); dj=abs(z[j]-c[0])-abs(z[j]-c[1])
-            if di<dj: triv[i],triv[j]=1,-1
-            else: triv[i],triv[j]=-1,1
+        triv=two_means_labels(df)
         amp=np.empty(len(df),int)
         for (r,cc),idx in df.groupby(['row','col']).groups.items():
             i,j=list(idx); amp[i],amp[j]=(1,-1) if df.amplitude[i]>=df.amplitude[j] else (-1,1)
