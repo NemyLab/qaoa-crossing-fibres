@@ -1,0 +1,6 @@
+method,mean,sd,min,n_patches_100,n_patches,p_vs_milp_exact_signflip
+exact_milp,0.9893,0.0277,0.88,25.0,30,
+axial_2means,0.9867,0.0321,0.88,24.0,30,0.625
+most_vertical,0.98,0.0443,0.8,23.0,30,0.2656
+amplitude,0.9667,0.0873,0.56,21.0,30,0.252
+random_feasible_expected,0.5806,,,,30,
