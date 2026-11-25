@@ -137,7 +137,12 @@ def draw_graph(ax, edges, pos, fields, spins=None, mismatch=None, dx=None, dy=No
         ax.add_collection(LineCollection(segs, colors="white" if spins is not None else mf.INK,
                                          linewidths=0.6, zorder=4))
     anchors = np.flatnonzero(np.abs(fields) > 1e-12)
-    ax.scatter(pos[anchors, 0] - 0.13, pos[anchors, 1] + 0.13, marker="*", s=12, c=mf.INK, lw=0, zorder=5)
+    # Boundary-field stars sit up-left of their node; on nodes circled as differing from the exact
+    # solution they are pushed just outside the ring so the ring does not cross them.
+    off = np.full(len(anchors), 0.13)
+    if mismatch is not None:
+        off[np.asarray(mismatch, dtype=bool)[anchors]] = 0.22
+    ax.scatter(pos[anchors, 0] - off, pos[anchors, 1] + off, marker="*", s=12, c=mf.INK, lw=0, zorder=5)
     if mismatch is not None:
         m = np.flatnonzero(mismatch)
         ax.scatter(pos[m, 0], pos[m, 1], s=58, facecolors="none", edgecolors=mf.INK, linewidths=0.7, zorder=4)
