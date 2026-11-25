@@ -18,6 +18,7 @@ five standard `curved_90` seeds as a drift control. Script: `src/hardware/heron/
 | `hardware_counts.json.gz` | Raw counts per circuit and job metrics |
 | `hardware_seed_level.csv` | Per-seed hardware and random-sampling metrics |
 | `hardware_summary.csv` | Endpoint summary per geometry |
+| `graphs.json.gz` | The 35 graphs as built and executed (macOS arm64, NumPy 2.4.3, SciPy 1.17.1), with exact MILP solutions |
 
 ## Results
 
@@ -46,8 +47,9 @@ The graphs are generated from simulated diffusion signals. In a few voxels of th
 candidate axes fit almost equally well, so floating-point differences between platforms can change a
 peak, an edge weight or a reference label. Regenerating the graphs on another machine therefore gives
 values that differ by about one voxel on some seeds. Two of the 30 graphs also differ in exact energy.
-The conclusions above do not change. To reproduce the numbers exactly, use the graphs from the machine
-that executed the job:
+The conclusions above do not change. The graphs from the machine that executed the job are stored in `graphs.json.gz`.
+`reanalyse` on Linux with these graphs reproduces every value in `hardware_seed_level.csv` to
+floating-point precision (maximum absolute difference below 1e-12). To reproduce:
 
 ```bash
 # on the machine that ran `prepare`
