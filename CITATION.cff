@@ -5,9 +5,18 @@ type: software
 authors:
   - family-names: Nemy
     given-names: Milan
+    affiliation: "Karolinska Institutet; Czech Technical University in Prague"
   - family-names: Ferreira
     given-names: Daniel
-  - family-names: Sivic
-    given-names: Josef
+    affiliation: "Karolinska Institutet; Universidad Fernando Pessoa Canarias"
+license: MIT
+repository-code: "https://github.com/NemyLab/qaoa-crossing-fibres"
+keywords:
+  - QAOA
+  - quantum optimization
+  - diffusion MRI
+  - crossing fibres
+  - Ising model
+  - IBM Quantum
 version: 1.0.0
-date-released: 2026-08-28
+date-released: 2026-11-25

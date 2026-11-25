@@ -1,0 +1,20 @@
+{
+  "selection_rule": "minimum hardware sampled mean energy; ties resolved by CVaR-10% energy and then best measured energy",
+  "backend": "ibm_berlin",
+  "gate_mode": "standard",
+  "graph_seed_used_for_calibration": 2000,
+  "shots_per_point": 500,
+  "selected_grid_index": 7,
+  "selected_gamma": 0.7071731744054941,
+  "selected_beta": 1.1743489498936892,
+  "selected_mean_energy": -17.04769730663288,
+  "selected_mean_energy_se": 0.22696358866658187,
+  "selected_mean_normalized_gap": 0.5227096838046723,
+  "selected_cvar10_normalized_gap": 0.3057646705795334,
+  "selected_best_normalized_gap": 0.17294614264612662,
+  "transferred_center_gamma": 0.7771731744054942,
+  "transferred_center_beta": 1.1743489498936892,
+  "transferred_center_mean_normalized_gap": 0.5308516261803736,
+  "improvement_over_center_mean_gap": 0.008141942375701317,
+  "warning": "This is a coarse 25-point calibration on the training instance only. Confirm leading candidates with higher-shot measurements before freezing hardware-calibrated angles for held-out seeds."
+}

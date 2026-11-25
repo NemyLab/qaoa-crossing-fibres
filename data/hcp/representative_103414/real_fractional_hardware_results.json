@@ -1,0 +1,53 @@
+{
+  "source": "30-PUB eight-neighbour Heron cohort",
+  "patch_id": "103414_R_88_86_76",
+  "strategies": [
+    {
+      "job_id": "d9toeplca1vs73a5jnfg",
+      "pub_index": 12,
+      "patch_id": "103414_R_88_86_76",
+      "register_name": "c",
+      "gamma": 0.7103982796590439,
+      "beta": 1.22628080530017,
+      "shots": 10000,
+      "n_unique_bitstrings": 10000,
+      "exact_energy": -36.1419628855128,
+      "mean_energy": -18.156480725664068,
+      "mean_energy_se": 0.0449679506462065,
+      "mean_normalized_gap": 0.4976343486606274,
+      "cvar10_energy": -25.407887693366707,
+      "cvar10_normalized_gap": 0.2969975711100283,
+      "cvar01_energy": -28.333739376097697,
+      "cvar01_normalized_gap": 0.2160431500123354,
+      "best_energy": -31.229807407059266,
+      "best_normalized_gap": 0.1359128029103955,
+      "best_agreement_with_exact_up_to_sign": 0.84,
+      "best_tom_agreement_all_voxels": 0.84,
+      "best_tom_agreement_confident_voxels": 0.84,
+      "n_tom_confident_voxels": 25,
+      "best_conflict_satisfaction_fraction": 1.0,
+      "best_weighted_continuation_satisfaction_fraction": 0.8734017696169775,
+      "exact_ground_hits": 0,
+      "exact_ground_hit_fraction": 0.0,
+      "mps_mean_normalized_gap": 0.3873994725669557,
+      "mps_cvar10_normalized_gap": 0.237147367528002,
+      "mps_best_normalized_gap": 0.0798369873195631,
+      "hardware_minus_mps_mean_gap": 0.1102348760936716,
+      "hardware_minus_mps_cvar10_gap": 0.0598502035820262,
+      "hardware_minus_mps_best_gap": 0.0560758155908324,
+      "transpiler_seed": 2003,
+      "twoq_depth": 55,
+      "n_twoq_gates": 286,
+      "n_active_physical_qubits": 52,
+      "mean_twoq_error": 0.002275811589031,
+      "max_twoq_error": 0.017641179891535,
+      "twoq_calibration_error_cost": 0.6522389940207856,
+      "independent_twoq_success_proxy": 0.5208782269445539,
+      "angle_strategy": "hardware_calibrated",
+      "best_bitstring": "10010111001011010101011100000001111110010100010110",
+      "best_assignment": {
+        "voxel_cst_peak_agreement_with_tom": 0.84
+      }
+    }
+  ]
+}

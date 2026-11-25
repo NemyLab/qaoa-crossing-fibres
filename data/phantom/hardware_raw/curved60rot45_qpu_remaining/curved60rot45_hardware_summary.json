@@ -1,0 +1,203 @@
+{
+  "collected_at_utc": "2026-07-18T19:53:22.140861+00:00",
+  "job_id": "d9dtdjo32iac73cpb4hg",
+  "backend": "ibm_aachen",
+  "geometry": "curved_60_rot45",
+  "seeds": [
+    2001,
+    2002,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2012,
+    2013,
+    2014,
+    2015
+  ],
+  "shots_per_pub": 10000,
+  "n_pubs": 24,
+  "dd": "XY4",
+  "job_metrics": {
+    "caller": "qiskit_ibm_runtime~sampler.py",
+    "qiskit_version": "qiskit_ibm_runtime-0.48.0,qiskit-2.4.2*,qiskit_aer-0.17.2",
+    "timestamps": {
+      "created": "2026-07-18T19:41:03.862253Z",
+      "finished": "2026-07-18T19:44:15.094958Z",
+      "running": "2026-07-18T19:41:04.634286Z"
+    },
+    "usage": {
+      "qpu_charge_time_seconds": 66,
+      "status": "complete"
+    },
+    "circuits_execution_time_ns": 63610935296
+  },
+  "strategy_summary": [
+    {
+      "angle_strategy": "hardware_calibrated",
+      "n_seeds": 12,
+      "mean_hardware_expected_gap": 0.4493849267418401,
+      "sd_hardware_expected_gap": 0.01311727691222481,
+      "mean_hardware_cvar10_gap": 0.253846947486165,
+      "mean_hardware_best_gap": 0.09755401303333573,
+      "mean_hardware_best_label_accuracy": 0.6866666666666666,
+      "mean_best_agreement_with_exact": 0.7000000000000001,
+      "total_exact_ground_hits": 0,
+      "mean_ideal_expected_gap": 0.32957635119700546
+    },
+    {
+      "angle_strategy": "transferred_center",
+      "n_seeds": 12,
+      "mean_hardware_expected_gap": 0.45180141693215764,
+      "sd_hardware_expected_gap": 0.015976579541684074,
+      "mean_hardware_cvar10_gap": 0.2544713950911439,
+      "mean_hardware_best_gap": 0.09305981515779549,
+      "mean_hardware_best_label_accuracy": 0.71,
+      "mean_best_agreement_with_exact": 0.6966666666666667,
+      "total_exact_ground_hits": 0,
+      "mean_ideal_expected_gap": 0.3230730967272992
+    }
+  ],
+  "paired_angle_comparison": [
+    {
+      "seed": 2001,
+      "calibrated_minus_transferred_mean_energy": 0.02054462867894813,
+      "difference_se": 0.05853406324703181,
+      "difference_z": 0.35098586257788833,
+      "calibrated_minus_transferred_mean_gap": 0.0006025019215530891,
+      "calibrated_minus_transferred_cvar10_gap": 0.0008901849392494721,
+      "calibrated_minus_transferred_best_gap": -0.017408069716176824,
+      "calibrated_minus_transferred_best_label_accuracy": -0.039999999999999925,
+      "calibrated_better_mean_energy": false
+    },
+    {
+      "seed": 2002,
+      "calibrated_minus_transferred_mean_energy": -0.19097300793018235,
+      "difference_se": 0.05899316635962759,
+      "difference_z": -3.2372055903220027,
+      "calibrated_minus_transferred_mean_gap": -0.005478862271451501,
+      "calibrated_minus_transferred_cvar10_gap": -0.005246182860850157,
+      "calibrated_minus_transferred_best_gap": -0.007193932763190386,
+      "calibrated_minus_transferred_best_label_accuracy": 0.24,
+      "calibrated_better_mean_energy": true
+    },
+    {
+      "seed": 2005,
+      "calibrated_minus_transferred_mean_energy": -0.27481491790487667,
+      "difference_se": 0.062276987418154704,
+      "difference_z": -4.412784389515346,
+      "calibrated_minus_transferred_mean_gap": -0.00801143388243919,
+      "calibrated_minus_transferred_cvar10_gap": -0.0009184196101393871,
+      "calibrated_minus_transferred_best_gap": 0.025124793678582377,
+      "calibrated_minus_transferred_best_label_accuracy": 0.0,
+      "calibrated_better_mean_energy": true
+    },
+    {
+      "seed": 2006,
+      "calibrated_minus_transferred_mean_energy": -0.30579975432503304,
+      "difference_se": 0.05984447005884233,
+      "difference_z": -5.109908301040249,
+      "calibrated_minus_transferred_mean_gap": -0.00898712972734933,
+      "calibrated_minus_transferred_cvar10_gap": -0.007673064318207912,
+      "calibrated_minus_transferred_best_gap": -0.06488115124734357,
+      "calibrated_minus_transferred_best_label_accuracy": 0.12,
+      "calibrated_better_mean_energy": true
+    },
+    {
+      "seed": 2007,
+      "calibrated_minus_transferred_mean_energy": -0.06653704619520795,
+      "difference_se": 0.05926179889198643,
+      "difference_z": -1.122764537007757,
+      "calibrated_minus_transferred_mean_gap": -0.002003127857216014,
+      "calibrated_minus_transferred_cvar10_gap": -0.00017293658309125437,
+      "calibrated_minus_transferred_best_gap": 0.01786659401761795,
+      "calibrated_minus_transferred_best_label_accuracy": -0.19999999999999996,
+      "calibrated_better_mean_energy": true
+    },
+    {
+      "seed": 2008,
+      "calibrated_minus_transferred_mean_energy": 0.20340247568476144,
+      "difference_se": 0.05745815960893926,
+      "difference_z": 3.5400102799866975,
+      "calibrated_minus_transferred_mean_gap": 0.006373375190057484,
+      "calibrated_minus_transferred_cvar10_gap": 0.002491303327132044,
+      "calibrated_minus_transferred_best_gap": 0.02799952029214907,
+      "calibrated_minus_transferred_best_label_accuracy": 0.0,
+      "calibrated_better_mean_energy": false
+    },
+    {
+      "seed": 2009,
+      "calibrated_minus_transferred_mean_energy": -0.08315833048514776,
+      "difference_se": 0.05934482723049833,
+      "difference_z": -1.4012734448135904,
+      "calibrated_minus_transferred_mean_gap": -0.0025262860055931813,
+      "calibrated_minus_transferred_cvar10_gap": -0.002246960285753302,
+      "calibrated_minus_transferred_best_gap": -7.913148516959512e-05,
+      "calibrated_minus_transferred_best_label_accuracy": 0.07999999999999996,
+      "calibrated_better_mean_energy": true
+    },
+    {
+      "seed": 2010,
+      "calibrated_minus_transferred_mean_energy": -0.08127295453249062,
+      "difference_se": 0.0598242387064057,
+      "difference_z": -1.358528855358226,
+      "calibrated_minus_transferred_mean_gap": -0.002475230997963318,
+      "calibrated_minus_transferred_cvar10_gap": 0.0009414935564025506,
+      "calibrated_minus_transferred_best_gap": -0.0035322124070924082,
+      "calibrated_minus_transferred_best_label_accuracy": 0.0,
+      "calibrated_better_mean_energy": true
+    },
+    {
+      "seed": 2012,
+      "calibrated_minus_transferred_mean_energy": 0.012219151174466703,
+      "difference_se": 0.058205363796923516,
+      "difference_z": 0.20993170349555576,
+      "calibrated_minus_transferred_mean_gap": 0.0003767200215964994,
+      "calibrated_minus_transferred_cvar10_gap": 0.00465448813335273,
+      "calibrated_minus_transferred_best_gap": -0.003635575963785595,
+      "calibrated_minus_transferred_best_label_accuracy": 0.07999999999999996,
+      "calibrated_better_mean_energy": false
+    },
+    {
+      "seed": 2013,
+      "calibrated_minus_transferred_mean_energy": -0.03648126242632799,
+      "difference_se": 0.06089695965039104,
+      "difference_z": -0.5990654153469503,
+      "calibrated_minus_transferred_mean_gap": -0.0010669991363775888,
+      "calibrated_minus_transferred_cvar10_gap": -0.0015837999264486924,
+      "calibrated_minus_transferred_best_gap": 0.010346488138026466,
+      "calibrated_minus_transferred_best_label_accuracy": -0.24,
+      "calibrated_better_mean_energy": true
+    },
+    {
+      "seed": 2014,
+      "calibrated_minus_transferred_mean_energy": -0.0443856133968481,
+      "difference_se": 0.0616398482942933,
+      "difference_z": -0.7200798610816402,
+      "calibrated_minus_transferred_mean_gap": -0.0013142290635533849,
+      "calibrated_minus_transferred_cvar10_gap": -0.0027700527370674854,
+      "calibrated_minus_transferred_best_gap": 0.03269501165388339,
+      "calibrated_minus_transferred_best_label_accuracy": -0.28,
+      "calibrated_better_mean_energy": true
+    },
+    {
+      "seed": 2015,
+      "calibrated_minus_transferred_mean_energy": -0.1558247621380744,
+      "difference_se": 0.06095108275904343,
+      "difference_z": -2.556554454563063,
+      "calibrated_minus_transferred_mean_gap": -0.00448718047507396,
+      "calibrated_minus_transferred_cvar10_gap": 0.004140575105674227,
+      "calibrated_minus_transferred_best_gap": 0.03662804030898212,
+      "calibrated_minus_transferred_best_label_accuracy": -0.039999999999999925,
+      "calibrated_better_mean_energy": true
+    }
+  ],
+  "files": {
+    "results": "curved60rot45_hardware_results.csv",
+    "counts": "curved60rot45_hardware_counts.json.gz",
+    "paired": "curved60rot45_paired_angle_comparison.csv",
+    "strategy_summary": "curved60rot45_strategy_summary.csv"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "primary_endpoint": "paired mean normalized energy-gap difference across independent replication seeds 2004-2015",
+  "lower_is_better": true,
+  "n_replication_seeds": 12,
+  "shots_per_seed_and_strategy": 5000,
+  "n_seeds": 12,
+  "mean_calibrated_minus_transferred_gap": -0.015679738767658213,
+  "sd_paired_gap_difference": 0.004084244553302229,
+  "se_paired_gap_difference": 0.0011790198461426524,
+  "paired_gap_difference_95ci": [
+    -0.01827474395247172,
+    -0.01308473358284471
+  ],
+  "one_sided_paired_t_pvalue": 2.008828218116784e-08,
+  "one_sided_wilcoxon_pvalue": 0.000244140625,
+  "calibrated_better_on_n_seeds": 12,
+  "one_sided_exact_sign_pvalue": 0.000244140625,
+  "strategy_results": [
+    {
+      "angle_strategy": "hardware_calibrated",
+      "n_seeds": 12,
+      "mean_hardware_expected_gap": 0.4766092924173914,
+      "sd_hardware_expected_gap": 0.021990643293715095,
+      "mean_hardware_cvar10_gap": 0.2831579525154923,
+      "mean_hardware_best_gap": 0.13276364341302146,
+      "mean_hardware_best_label_accuracy": 0.6833333333333332,
+      "total_exact_ground_hits": 0,
+      "mean_ideal_expected_gap": 0.3418657896107768
+    },
+    {
+      "angle_strategy": "transferred_center",
+      "n_seeds": 12,
+      "mean_hardware_expected_gap": 0.49228903118504963,
+      "sd_hardware_expected_gap": 0.02561317143685758,
+      "mean_hardware_cvar10_gap": 0.2951487539696868,
+      "mean_hardware_best_gap": 0.13635185967808433,
+      "mean_hardware_best_label_accuracy": 0.6383333333333333,
+      "total_exact_ground_hits": 0,
+      "mean_ideal_expected_gap": 0.3347256618056013
+    }
+  ],
+  "interpretation_rule": "Replication supports hardware calibration when the mean paired gap difference is negative; the confidence interval, paired t, Wilcoxon, and sign results are reported without changing the endpoint."
+}

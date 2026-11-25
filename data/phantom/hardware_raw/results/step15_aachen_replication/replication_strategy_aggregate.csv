@@ -1,0 +1,3 @@
+angle_strategy,n_seeds,mean_hardware_expected_gap,sd_hardware_expected_gap,mean_hardware_cvar10_gap,mean_hardware_best_gap,mean_hardware_best_label_accuracy,total_exact_ground_hits,mean_ideal_expected_gap
+hardware_calibrated,12,0.4766092924173914,0.021990643293715095,0.2831579525154923,0.13276364341302146,0.6833333333333332,0,0.3418657896107768
+transferred_center,12,0.49228903118504963,0.02561317143685758,0.2951487539696868,0.13635185967808433,0.6383333333333333,0,0.3347256618056013

@@ -1,0 +1,32 @@
+platform   condition_key
+Heron      60_original      15
+           60_rotated       15
+           90_original      15
+           90_rotated       15
+Nighthawk  60_original      15
+           60_rotated       15
+           90_original      15
+           90_rotated       15
+dtype: int64
+
+== Heron
+best_agreement_with_anatomical_reference 90_original:0.987(0.020) 90_rotated:0.976(0.036) 60_original:0.915(0.114) 60_rotated:0.923(0.065) | ang -0.063 raw=0.00146 holm2=0.0029 holm3=0.0044 | rot -0.001 raw=1.0000 holm2=1.000 holm3=1.000 | inter raw=0.768
+ideal_mean_normalized_gap 90_original:0.349(0.024) 90_rotated:0.362(0.018) 60_original:0.316(0.021) 60_rotated:0.330(0.023) | ang -0.033 raw=0.00006 holm2=0.0001 holm3=0.0002 | rot 0.014 raw=0.0566 holm2=0.057 holm3=0.113 | inter raw=0.855
+qpu_mean_normalized_gap 90_original:0.483(0.024) 90_rotated:0.484(0.030) 60_original:0.432(0.021) 60_rotated:0.454(0.017) | ang -0.040 raw=0.00006 holm2=0.0001 holm3=0.0002 | rot 0.011 raw=0.2193 holm2=0.219 holm3=0.219 | inter raw=0.079
+qpu_cvar10_normalized_gap 90_original:0.290(0.024) 90_rotated:0.286(0.025) 60_original:0.246(0.020) 60_rotated:0.257(0.016) | ang -0.036 raw=0.00006 holm2=0.0001 holm3=0.0002 | rot 0.004 raw=0.6527 holm2=0.653 holm3=0.653 | inter raw=0.177
+best_agreement_with_exact 90_original:0.696(0.101) 90_rotated:0.672(0.096) 60_original:0.696(0.083) 60_rotated:0.691(0.079) | ang 0.009 raw=0.74609 holm2=1.0000 holm3=1.0000 | rot -0.015 raw=0.5826 holm2=1.000 holm3=1.000 | inter raw=0.774
+
+== Nighthawk
+best_agreement_with_anatomical_reference 90_original:0.987(0.020) 90_rotated:0.976(0.036) 60_original:0.915(0.114) 60_rotated:0.923(0.065) | ang -0.063 raw=0.00146 holm2=0.0029 holm3=0.0044 | rot -0.001 raw=1.0000 holm2=1.000 holm3=1.000 | inter raw=0.768
+ideal_mean_normalized_gap 90_original:0.337(0.024) 90_rotated:0.349(0.018) 60_original:0.303(0.022) 60_rotated:0.318(0.023) | ang -0.033 raw=0.00006 holm2=0.0001 holm3=0.0002 | rot 0.014 raw=0.0566 holm2=0.057 holm3=0.113 | inter raw=0.843
+qpu_mean_normalized_gap 90_original:0.492(0.023) 90_rotated:0.495(0.019) 60_original:0.450(0.024) 60_rotated:0.475(0.028) | ang -0.031 raw=0.00006 holm2=0.0001 holm3=0.0002 | rot 0.014 raw=0.0464 holm2=0.046 holm3=0.093 | inter raw=0.070
+qpu_cvar10_normalized_gap 90_original:0.286(0.022) 90_rotated:0.284(0.016) 60_original:0.249(0.021) 60_rotated:0.263(0.023) | ang -0.029 raw=0.00006 holm2=0.0001 holm3=0.0002 | rot 0.006 raw=0.3207 holm2=0.321 holm3=0.321 | inter raw=0.110
+best_agreement_with_exact 90_original:0.703(0.093) 90_rotated:0.635(0.088) 60_original:0.685(0.109) 60_rotated:0.731(0.072) | ang 0.039 raw=0.13928 holm2=0.2786 holm3=0.2786 | rot -0.011 raw=0.6447 holm2=0.645 holm3=0.645 | inter raw=0.051
+
+== Heron vs Nighthawk paired t, Holm over 4 conditions
+qpu_mean_normalized_gap [('90_original', np.float64(0.009), np.float64(0.078)), ('90_rotated', np.float64(0.011), np.float64(0.078)), ('60_original', np.float64(0.018), np.float64(0.005)), ('60_rotated', np.float64(0.021), np.float64(0.01))]
+qpu_cvar10_normalized_gap [('90_original', np.float64(-0.003), np.float64(0.873)), ('90_rotated', np.float64(-0.002), np.float64(0.873)), ('60_original', np.float64(0.003), np.float64(0.873)), ('60_rotated', np.float64(0.006), np.float64(0.451))]
+best_agreement_with_exact [('90_original', np.float64(0.007), np.float64(1.0)), ('90_rotated', np.float64(-0.037), np.float64(0.904)), ('60_original', np.float64(-0.011), np.float64(1.0)), ('60_rotated', np.float64(0.04), np.float64(0.74))]
+penalty [('90_original', np.float64(0.021), np.float64(0.00071)), ('90_rotated', np.float64(0.024), np.float64(0.00071)), ('60_original', np.float64(0.031), np.float64(3e-05)), ('60_rotated', np.float64(0.033), np.float64(0.0002))]
+Heron penalty by cond {'mean': {'60_original': 0.117, '60_rotated': 0.124, '90_original': 0.134, '90_rotated': 0.122}, 'min': {'60_original': 0.092, '60_rotated': 0.092, '90_original': 0.112, '90_rotated': 0.093}, 'max': {'60_original': 0.14, '60_rotated': 0.144, '90_original': 0.155, '90_rotated': 0.158}}
+Nighthawk penalty by cond {'mean': {'60_original': 0.147, '60_rotated': 0.157, '90_original': 0.155, '90_rotated': 0.146}, 'min': {'60_original': 0.126, '60_rotated': 0.141, '90_original': 0.128, '90_rotated': 0.128}, 'max': {'60_original': 0.158, '60_rotated': 0.186, '90_original': 0.183, '90_rotated': 0.159}}

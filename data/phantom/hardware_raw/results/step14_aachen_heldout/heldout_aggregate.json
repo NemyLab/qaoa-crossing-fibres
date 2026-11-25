@@ -1,0 +1,33 @@
+{
+  "primary_endpoint": "mean normalized energy gap across held-out seeds 2001-2003",
+  "lower_is_better": true,
+  "n_heldout_seeds": 3,
+  "shots_per_seed_and_strategy": 10000,
+  "mean_calibrated_minus_transferred_gap": -0.011233202059390676,
+  "calibrated_better_on_n_of_3_seeds": 3,
+  "strategy_results": [
+    {
+      "angle_strategy": "hardware_calibrated",
+      "n_seeds": 3,
+      "mean_hardware_expected_gap": 0.5068555774111331,
+      "sd_hardware_expected_gap": 0.02018763936276186,
+      "mean_hardware_cvar10_gap": 0.31566486289408746,
+      "mean_hardware_best_gap": 0.15621954952195274,
+      "mean_hardware_best_label_accuracy": 0.6,
+      "total_exact_ground_hits": 0,
+      "mean_ideal_expected_gap": 0.37824955776468966
+    },
+    {
+      "angle_strategy": "transferred_center",
+      "n_seeds": 3,
+      "mean_hardware_expected_gap": 0.5180887794705238,
+      "sd_hardware_expected_gap": 0.02163552577004362,
+      "mean_hardware_cvar10_gap": 0.32453116863959175,
+      "mean_hardware_best_gap": 0.15725440910967914,
+      "mean_hardware_best_label_accuracy": 0.5866666666666667,
+      "total_exact_ground_hits": 0,
+      "mean_ideal_expected_gap": 0.3746576259611933
+    }
+  ],
+  "interpretation_rule": "The hardware-calibrated strategy is supported only if it improves the preregistered mean held-out normalized gap; seed-level consistency is reported descriptively."
+}

@@ -1,0 +1,25 @@
+{
+  "selection_rule": "lowest mean energy in independent higher-shot confirmation; ties by CVaR-10% then best energy",
+  "backend": "ibm_aachen",
+  "graph_seed_used_for_calibration": 2000,
+  "shots_per_candidate": 2000,
+  "selected_candidate_index": 1,
+  "selected_candidate_label": "quadratic_fitted_optimum",
+  "selected_gamma": 0.7103982796590439,
+  "selected_beta": 1.22628080530017,
+  "selected_mean_energy": -17.92164462122663,
+  "selected_mean_energy_se": 0.10133805031009908,
+  "selected_mean_normalized_gap": 0.4982414765965226,
+  "selected_cvar10_normalized_gap": 0.30087727538938,
+  "selected_best_normalized_gap": 0.1958128355873372,
+  "selected_best_label_accuracy": 0.32,
+  "transferred_center_mean_normalized_gap": 0.5046709218187927,
+  "energy_improvement_over_center": 0.22964479328338427,
+  "energy_improvement_over_center_se": 0.14390399784554395,
+  "energy_improvement_over_center_95ci": [
+    -0.05240704249388184,
+    0.5116966290606504
+  ],
+  "confirmation_supports_improvement_over_center_at_95pct": false,
+  "note": "Seeds 2001-2003 remain held out and were not used for angle selection."
+}

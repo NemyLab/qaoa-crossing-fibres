@@ -1,0 +1,25 @@
+{
+  "title": "Code and data for \"Hardware-aware QAOA for crossing-fibre reconstruction in diffusion MRI\"",
+  "upload_type": "software",
+  "description": "<p>Code and reproducibility materials for the manuscript \"Hardware-aware QAOA for crossing-fibre reconstruction in diffusion MRI\" (Nemy and Ferreira). The archive contains the construction of sparse 50-variable Ising graphs from 5 × 5-voxel diffusion-MRI patches, exact MILP solutions, noiseless and matrix-product-state QAOA simulation, the IBM Heron (ibm_aachen) and Nighthawk (ibm_berlin) depth-one QAOA hardware workflows, finite-budget classical controls, non-spatial baselines, statistical analyses and figure scripts, together with the synthetic-phantom numerical results and raw hardware bitstrings.</p><p>HCP-YA imaging data are not redistributed; see README.md.</p>",
+  "creators": [
+    {
+      "name": "Nemy, Milan",
+      "affiliation": "Karolinska Institutet; Czech Technical University in Prague"
+    },
+    {
+      "name": "Ferreira, Daniel",
+      "affiliation": "Karolinska Institutet; Universidad Fernando Pessoa Canarias"
+    }
+  ],
+  "license": "mit",
+  "access_right": "open",
+  "keywords": [
+    "QAOA",
+    "quantum optimization",
+    "diffusion MRI",
+    "crossing fibres",
+    "Ising model",
+    "IBM Quantum"
+  ]
+}

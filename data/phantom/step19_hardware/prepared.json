@@ -1,0 +1,26 @@
+{
+  "prepared_at_utc": "2026-11-03T20:24:41.120449+00:00",
+  "backend": "ibm_aachen",
+  "gate_mode": "fractional",
+  "fake_backend": false,
+  "n_pubs": 35,
+  "transpilation_trials": 20,
+  "gamma": 0.7103982796590439,
+  "beta": 1.22628080530017,
+  "preregistration": {
+    "frozen_at": "before submission; committed to the repository with this script",
+    "unit": "graph seed (15 per harder geometry), paired within seed",
+    "primary_endpoints": [
+      "E1: Heron mean normalized gap < 1 (uniform random sampling) on each harder geometry",
+      "E2: Heron execution penalty = Heron mean gap - ideal light-cone p=1 gap, per geometry",
+      "E3: sign-invariant label agreement of the lowest-energy Heron sample vs the non-spatial axial two-means rule, paired by seed"
+    ],
+    "secondary_endpoints": [
+      "Heron CVaR-10% normalized gap",
+      "lowest-energy Heron sample vs best of an equal number of uniform random samples (agreement and gap)",
+      "drift control: curved_90 seeds 2001-2005 vs the published Heron values"
+    ],
+    "tests": "exact two-sided paired sign-flip tests on seed-level differences; Holm over E3 and the random-sampling comparison within each geometry",
+    "no_parameter_retuning": true
+  }
+}

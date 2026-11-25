@@ -1,0 +1,20 @@
+{
+  "prepared_at_utc": "2026-07-16T14:09:49.808516+00:00",
+  "backend": "ibm_aachen",
+  "gate_mode": "fractional",
+  "graph_seed": 2000,
+  "shots_per_point": 2000,
+  "n_candidates": 6,
+  "total_requested_shots": 12000,
+  "dd": "XY4",
+  "current_pending_jobs": 3,
+  "execution_mode": "bound_folded_confirmation_circuits_in_one_runtime_job",
+  "all_rzz_angles_within_fractional_range": true,
+  "minimum_folded_rzz_angle": 0.06846532264501284,
+  "maximum_folded_rzz_angle": 1.5543463488109883,
+  "files": {
+    "candidates": "confirmation_candidates.csv",
+    "qpy": "confirmation_bound_folded_isa.qpy",
+    "fold_summary": "confirmation_fold_summary.csv"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "collected_at_utc": "2026-07-19T12:15:13.511318+00:00",
+  "job_id": "d9ebps805i9c73a0i640",
+  "backend": "ibm_berlin",
+  "geometry": "curved_60",
+  "angle_strategy": "nighthawk_calibrated",
+  "angle_selection_provenance": "frozen after seed-2000 calibration and independent seed-2001-to-2015 validation on curved_90",
+  "seeds": [
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+  ],
+  "shots_per_pub": 10000,
+  "n_pubs": 15,
+  "dd": "XY4",
+  "job_metrics": {
+    "caller": "qiskit_ibm_runtime~sampler.py",
+    "qiskit_version": "qiskit_ibm_runtime-0.48.0,qiskit-2.4.2*,qiskit_aer-0.17.2",
+    "timestamps": {
+      "created": "2026-07-19T12:02:57.825587Z",
+      "finished": "2026-07-19T12:13:07.556848Z",
+      "running": "2026-07-19T12:02:58.662093Z"
+    },
+    "usage": {
+      "qpu_charge_time_seconds": 603,
+      "status": "complete"
+    },
+    "circuits_execution_time_ns": 600913634048
+  },
+  "strategy_summary": [
+    {
+      "angle_strategy": "nighthawk_calibrated",
+      "n_seeds": 15,
+      "mean_hardware_expected_gap": 0.44995300397734656,
+      "sd_hardware_expected_gap": 0.024388854322688162,
+      "mean_hardware_cvar10_gap": 0.2488938936443609,
+      "mean_hardware_best_gap": 0.09812519373732057,
+      "mean_hardware_best_label_accuracy": 0.656,
+      "mean_best_agreement_with_exact": 0.6853333333333332,
+      "total_exact_ground_hits": 0,
+      "mean_ideal_expected_gap": 0.30288284932841025
+    }
+  ],
+  "files": {
+    "results": "nighthawk_curved60_hardware_results.csv",
+    "counts": "nighthawk_curved60_hardware_counts.json.gz",
+    "strategy_summary": "nighthawk_curved60_strategy_summary.csv"
+  }
+}

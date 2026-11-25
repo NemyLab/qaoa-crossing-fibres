@@ -1,0 +1,239 @@
+{
+  "collected_at_utc": "2026-07-19T09:46:11.378703+00:00",
+  "job_id": "d9e927032iac73cplgog",
+  "backend": "ibm_berlin",
+  "geometry": "curved_90",
+  "seeds": [
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+  ],
+  "shots_per_pub": 10000,
+  "n_pubs": 30,
+  "dd": "XY4",
+  "job_metrics": {
+    "caller": "qiskit_ibm_runtime~sampler.py",
+    "qiskit_version": "qiskit_ibm_runtime-0.48.0,qiskit-2.4.2*,qiskit_aer-0.17.2",
+    "timestamps": {
+      "created": "2026-07-19T08:55:56.176263Z",
+      "finished": "2026-07-19T09:16:09.629557Z",
+      "running": "2026-07-19T08:55:56.87094Z"
+    },
+    "usage": {
+      "qpu_charge_time_seconds": 1204,
+      "status": "complete"
+    },
+    "circuits_execution_time_ns": 1202038152448
+  },
+  "strategy_summary": [
+    {
+      "angle_strategy": "nighthawk_calibrated",
+      "n_seeds": 15,
+      "mean_hardware_expected_gap": 0.4916464388497586,
+      "sd_hardware_expected_gap": 0.023384945344647405,
+      "mean_hardware_cvar10_gap": 0.2861808558512406,
+      "mean_hardware_best_gap": 0.1263094427381133,
+      "mean_hardware_best_label_accuracy": 0.6946666666666667,
+      "mean_best_agreement_with_exact": 0.7026666666666667,
+      "total_exact_ground_hits": 0,
+      "mean_ideal_expected_gap": 0.33696381625076083
+    },
+    {
+      "angle_strategy": "transferred_center",
+      "n_seeds": 15,
+      "mean_hardware_expected_gap": 0.4948716648122324,
+      "sd_hardware_expected_gap": 0.023792823091315515,
+      "mean_hardware_cvar10_gap": 0.2887323542369338,
+      "mean_hardware_best_gap": 0.13230310474224913,
+      "mean_hardware_best_label_accuracy": 0.7200000000000001,
+      "mean_best_agreement_with_exact": 0.712,
+      "total_exact_ground_hits": 0,
+      "mean_ideal_expected_gap": 0.3427120546367197
+    }
+  ],
+  "paired_angle_comparison": [
+    {
+      "seed": 2001,
+      "calibrated_minus_transferred_mean_energy": -0.15809390867785567,
+      "difference_se": 0.06714840857369012,
+      "difference_z": -2.354395465744508,
+      "calibrated_minus_transferred_mean_gap": -0.0042959315933157605,
+      "calibrated_minus_transferred_cvar10_gap": -0.0027446789888970757,
+      "calibrated_minus_transferred_best_gap": 0.037817949871586154,
+      "calibrated_minus_transferred_best_label_accuracy": -0.24,
+      "calibrated_better_mean_energy": true
+    },
+    {
+      "seed": 2002,
+      "calibrated_minus_transferred_mean_energy": -0.07136594912458705,
+      "difference_se": 0.0678480827181776,
+      "difference_z": -1.0518491645669885,
+      "calibrated_minus_transferred_mean_gap": -0.0020193156122291223,
+      "calibrated_minus_transferred_cvar10_gap": -0.0004493322680056977,
+      "calibrated_minus_transferred_best_gap": -0.024341342358575296,
+      "calibrated_minus_transferred_best_label_accuracy": 0.0,
+      "calibrated_better_mean_energy": true
+    },
+    {
+      "seed": 2003,
+      "calibrated_minus_transferred_mean_energy": -0.1441028612662194,
+      "difference_se": 0.06581778375509935,
+      "difference_z": -2.1894213546054684,
+      "calibrated_minus_transferred_mean_gap": -0.004038144765939444,
+      "calibrated_minus_transferred_cvar10_gap": -0.003518040617424223,
+      "calibrated_minus_transferred_best_gap": -0.048341530794273876,
+      "calibrated_minus_transferred_best_label_accuracy": 0.16000000000000003,
+      "calibrated_better_mean_energy": true
+    },
+    {
+      "seed": 2004,
+      "calibrated_minus_transferred_mean_energy": 0.08273025986919436,
+      "difference_se": 0.06751411057098883,
+      "difference_z": 1.2253773199338271,
+      "calibrated_minus_transferred_mean_gap": 0.0024488697765843725,
+      "calibrated_minus_transferred_cvar10_gap": 0.0018401764926846975,
+      "calibrated_minus_transferred_best_gap": -0.029268878032595702,
+      "calibrated_minus_transferred_best_label_accuracy": 0.0,
+      "calibrated_better_mean_energy": false
+    },
+    {
+      "seed": 2005,
+      "calibrated_minus_transferred_mean_energy": -0.1430598514783128,
+      "difference_se": 0.06679751178962971,
+      "difference_z": -2.141694318328228,
+      "calibrated_minus_transferred_mean_gap": -0.004210314866581133,
+      "calibrated_minus_transferred_cvar10_gap": -0.00613695272712067,
+      "calibrated_minus_transferred_best_gap": 0.021828218647731476,
+      "calibrated_minus_transferred_best_label_accuracy": 0.15999999999999992,
+      "calibrated_better_mean_energy": true
+    },
+    {
+      "seed": 2006,
+      "calibrated_minus_transferred_mean_energy": -0.05041633354828434,
+      "difference_se": 0.06814420310891939,
+      "difference_z": -0.7398477236236893,
+      "calibrated_minus_transferred_mean_gap": -0.0014592747558674346,
+      "calibrated_minus_transferred_cvar10_gap": -0.0021307920874841235,
+      "calibrated_minus_transferred_best_gap": 0.03458902652621172,
+      "calibrated_minus_transferred_best_label_accuracy": -0.12,
+      "calibrated_better_mean_energy": true
+    },
+    {
+      "seed": 2007,
+      "calibrated_minus_transferred_mean_energy": -0.1665563378348658,
+      "difference_se": 0.06607529117837194,
+      "difference_z": -2.5207053175935723,
+      "calibrated_minus_transferred_mean_gap": -0.004692516168086136,
+      "calibrated_minus_transferred_cvar10_gap": -0.004404179176052014,
+      "calibrated_minus_transferred_best_gap": 0.003175575929766833,
+      "calibrated_minus_transferred_best_label_accuracy": -0.22000000000000008,
+      "calibrated_better_mean_energy": true
+    },
+    {
+      "seed": 2008,
+      "calibrated_minus_transferred_mean_energy": -0.08740499043161876,
+      "difference_se": 0.06669615657388851,
+      "difference_z": -1.3104951607636974,
+      "calibrated_minus_transferred_mean_gap": -0.002600701034050412,
+      "calibrated_minus_transferred_cvar10_gap": -0.002210492646392892,
+      "calibrated_minus_transferred_best_gap": -0.05670004103417882,
+      "calibrated_minus_transferred_best_label_accuracy": 0.12,
+      "calibrated_better_mean_energy": true
+    },
+    {
+      "seed": 2009,
+      "calibrated_minus_transferred_mean_energy": -0.10117012717106277,
+      "difference_se": 0.0668961136712085,
+      "difference_z": -1.5123468557278166,
+      "calibrated_minus_transferred_mean_gap": -0.0028553691912424073,
+      "calibrated_minus_transferred_cvar10_gap": -0.0002917851422439277,
+      "calibrated_minus_transferred_best_gap": 0.006905639670320901,
+      "calibrated_minus_transferred_best_label_accuracy": -0.040000000000000036,
+      "calibrated_better_mean_energy": true
+    },
+    {
+      "seed": 2010,
+      "calibrated_minus_transferred_mean_energy": -0.20239943902161528,
+      "difference_se": 0.06804242481382174,
+      "difference_z": -2.974606498451846,
+      "calibrated_minus_transferred_mean_gap": -0.005778423885326123,
+      "calibrated_minus_transferred_cvar10_gap": -0.006509759936491388,
+      "calibrated_minus_transferred_best_gap": -0.03839446539601826,
+      "calibrated_minus_transferred_best_label_accuracy": -0.07999999999999996,
+      "calibrated_better_mean_energy": true
+    },
+    {
+      "seed": 2011,
+      "calibrated_minus_transferred_mean_energy": -0.12442931047592154,
+      "difference_se": 0.06553582972799367,
+      "difference_z": -1.8986455347001043,
+      "calibrated_minus_transferred_mean_gap": -0.00361271600476043,
+      "calibrated_minus_transferred_cvar10_gap": -0.0039483128032277715,
+      "calibrated_minus_transferred_best_gap": -0.026581483312459325,
+      "calibrated_minus_transferred_best_label_accuracy": 0.20000000000000007,
+      "calibrated_better_mean_energy": true
+    },
+    {
+      "seed": 2012,
+      "calibrated_minus_transferred_mean_energy": -0.28712668717442824,
+      "difference_se": 0.06003273756912633,
+      "difference_z": -4.782835146303438,
+      "calibrated_minus_transferred_mean_gap": -0.0085171447324498,
+      "calibrated_minus_transferred_cvar10_gap": -0.0049245737764672115,
+      "calibrated_minus_transferred_best_gap": -0.005199096024368896,
+      "calibrated_minus_transferred_best_label_accuracy": 0.040000000000000036,
+      "calibrated_better_mean_energy": true
+    },
+    {
+      "seed": 2013,
+      "calibrated_minus_transferred_mean_energy": -0.09367620565058843,
+      "difference_se": 0.06352066765901444,
+      "difference_z": -1.4747358474481416,
+      "calibrated_minus_transferred_mean_gap": -0.00269543136438799,
+      "calibrated_minus_transferred_cvar10_gap": 0.0016163289818675874,
+      "calibrated_minus_transferred_best_gap": 0.06281012774169979,
+      "calibrated_minus_transferred_best_label_accuracy": -0.12,
+      "calibrated_better_mean_energy": true
+    },
+    {
+      "seed": 2014,
+      "calibrated_minus_transferred_mean_energy": 0.07477341714443497,
+      "difference_se": 0.06316756217739286,
+      "difference_z": 1.1837312469721326,
+      "calibrated_minus_transferred_mean_gap": 0.0022667149057584712,
+      "calibrated_minus_transferred_cvar10_gap": 0.0033478112745203292,
+      "calibrated_minus_transferred_best_gap": -0.001729951525579712,
+      "calibrated_minus_transferred_best_label_accuracy": -0.19999999999999996,
+      "calibrated_better_mean_energy": false
+    },
+    {
+      "seed": 2015,
+      "calibrated_minus_transferred_mean_energy": -0.2188481318608737,
+      "difference_se": 0.0679597847903332,
+      "difference_z": -3.220259342139696,
+      "calibrated_minus_transferred_mean_gap": -0.006318690145212358,
+      "calibrated_minus_transferred_cvar10_gap": -0.007807892364664171,
+      "calibrated_minus_transferred_best_gap": -0.026474679971304704,
+      "calibrated_minus_transferred_best_label_accuracy": -0.040000000000000036,
+      "calibrated_better_mean_energy": true
+    }
+  ],
+  "files": {
+    "results": "nighthawk_curved90_hardware_results.csv",
+    "counts": "nighthawk_curved90_hardware_counts.json.gz",
+    "paired": "nighthawk_curved90_paired_angle_comparison.csv",
+    "strategy_summary": "nighthawk_curved90_strategy_summary.csv"
+  }
+}

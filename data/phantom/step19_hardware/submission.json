@@ -1,0 +1,11 @@
+{
+  "backend": "ibm_aachen",
+  "n_pubs": 35,
+  "shots_per_pub": 10000,
+  "total_shots": 350000,
+  "dd": "XY4",
+  "max_execution_time_s": 900,
+  "pending_jobs": 25,
+  "job_id": "dbl464hul9ic73fc49ug",
+  "submitted_at_utc": "2026-11-03T20:24:50.629447+00:00"
+}

@@ -1,0 +1,95 @@
+{
+  "collected_at_utc": "2026-07-17T19:59:43.743338+00:00",
+  "job_id": "d9d8hjdc01nc73a6saig",
+  "backend": "ibm_aachen",
+  "geometry": "curved_90_rot45",
+  "seeds": [
+    2003,
+    2004,
+    2011
+  ],
+  "shots_per_pub": 10000,
+  "n_pubs": 6,
+  "dd": "XY4",
+  "job_metrics": {
+    "caller": "qiskit_ibm_runtime~sampler.py",
+    "qiskit_version": "qiskit_ibm_runtime-0.48.0,qiskit-2.4.2*,qiskit_aer-0.17.2",
+    "timestamps": {
+      "created": "2026-07-17T19:55:58.006658Z",
+      "finished": "2026-07-17T19:56:25.040802Z",
+      "running": "2026-07-17T19:55:59.771411Z"
+    },
+    "usage": {
+      "qpu_charge_time_seconds": 18,
+      "status": "complete"
+    },
+    "circuits_execution_time_ns": 15986295040
+  },
+  "strategy_summary": [
+    {
+      "angle_strategy": "hardware_calibrated",
+      "n_seeds": 3,
+      "mean_hardware_expected_gap": 0.5117580709706951,
+      "sd_hardware_expected_gap": 0.03745245970663675,
+      "mean_hardware_cvar10_gap": 0.31072595572575934,
+      "mean_hardware_best_gap": 0.14366792160406097,
+      "mean_hardware_best_label_accuracy": 0.7466666666666667,
+      "mean_best_agreement_with_exact": 0.7466666666666667,
+      "total_exact_ground_hits": 0,
+      "mean_ideal_expected_gap": 0.3767734895706519
+    },
+    {
+      "angle_strategy": "transferred_center",
+      "n_seeds": 3,
+      "mean_hardware_expected_gap": 0.5202710613512803,
+      "sd_hardware_expected_gap": 0.04202557949244794,
+      "mean_hardware_cvar10_gap": 0.31574418654403485,
+      "mean_hardware_best_gap": 0.16428021944291446,
+      "mean_hardware_best_label_accuracy": 0.6933333333333334,
+      "mean_best_agreement_with_exact": 0.6933333333333334,
+      "total_exact_ground_hits": 0,
+      "mean_ideal_expected_gap": 0.37641443468367836
+    }
+  ],
+  "paired_angle_comparison": [
+    {
+      "seed": 2003,
+      "calibrated_minus_transferred_mean_energy": -0.3103633787951665,
+      "difference_se": 0.06452325820538626,
+      "difference_z": -4.810100844678951,
+      "calibrated_minus_transferred_mean_gap": -0.008832320360653179,
+      "calibrated_minus_transferred_cvar10_gap": -0.005884692026312255,
+      "calibrated_minus_transferred_best_gap": -0.007199574848945928,
+      "calibrated_minus_transferred_best_label_accuracy": 0.07999999999999996,
+      "calibrated_better_mean_energy": true
+    },
+    {
+      "seed": 2004,
+      "calibrated_minus_transferred_mean_energy": -0.4671690707896339,
+      "difference_se": 0.0654425717434615,
+      "difference_z": -7.138611126423369,
+      "calibrated_minus_transferred_mean_gap": -0.012918262422521143,
+      "calibrated_minus_transferred_cvar10_gap": -0.008741568654321685,
+      "calibrated_minus_transferred_best_gap": -0.02716347186843776,
+      "calibrated_minus_transferred_best_label_accuracy": 0.08000000000000007,
+      "calibrated_better_mean_energy": true
+    },
+    {
+      "seed": 2011,
+      "calibrated_minus_transferred_mean_energy": -0.13226068789326106,
+      "difference_se": 0.061287144405222704,
+      "difference_z": -2.158049443758881,
+      "calibrated_minus_transferred_mean_gap": -0.0037883883585815292,
+      "calibrated_minus_transferred_cvar10_gap": -0.0004284317741924393,
+      "calibrated_minus_transferred_best_gap": -0.027473846799176804,
+      "calibrated_minus_transferred_best_label_accuracy": 0.0,
+      "calibrated_better_mean_energy": true
+    }
+  ],
+  "files": {
+    "results": "rotated90_hardware_results.csv",
+    "counts": "rotated90_hardware_counts.json.gz",
+    "paired": "rotated90_paired_angle_comparison.csv",
+    "strategy_summary": "rotated90_strategy_summary.csv"
+  }
+}
