@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Vector schematic for Figure 1 panels d-f (QAOA circuit, calibration, evaluation).
 
-Panels a-c (anatomy, FOD glyphs, graph) are rendered images and are composed
-with this file in the layout program. All numbers follow the Methods.
+The panel functions are used by make_figure1.py, which builds the complete figure.
+Run on its own, this script writes only panels d-f. All numbers follow the Methods.
 
 Usage: python src/figures/make_figure1_schematic.py --out figures/main
 """
