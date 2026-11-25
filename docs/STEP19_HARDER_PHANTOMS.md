@@ -52,3 +52,13 @@ Offline check without an IBM account: `prepare --fake` (fake_aachen snapshot), t
 Expected cost: 350,000 shots in total. That is roughly 2–3 minutes of QPU time on Heron, about
 the size of the earlier replication job (24 circuits × 5,000 shots), so check that job's usage
 in the IBM dashboard for the RU equivalent.
+
+## Outcome (job `dbl464hul9ic73fc49ug`, 3 November 2026)
+
+The run used 95 s of QPU time (1.57 RU). E1 and E2 were met and E3 was not. Results, raw counts and
+the reproduction notes are in [`data/phantom/step19_hardware`](../data/phantom/step19_hardware/README.md).
+
+The classical reference values above were computed on Linux. On the graphs as executed (macOS), MILP
+agreement was 0.888 and 0.773, and two-means agreement was 0.653 and 0.627; see the README for why
+regenerated graphs can differ slightly between platforms. Note that this run used 20 transpilation
+trials per circuit, whereas the main Heron experiments used 10.
