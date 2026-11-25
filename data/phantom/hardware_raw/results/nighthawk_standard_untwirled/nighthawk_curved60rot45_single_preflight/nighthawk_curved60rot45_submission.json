@@ -1,0 +1,81 @@
+{
+  "experiment": "nighthawk_rotated_60_degree_orientation_generalization",
+  "geometry": "curved_60_rot45",
+  "seeds": [
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+  ],
+  "angle_strategies": {
+    "nighthawk_calibrated": {
+      "gamma": 0.7071731744054941,
+      "beta": 1.1743489498936892
+    }
+  },
+  "backend_status": {
+    "backend": "ibm_berlin",
+    "operational": true,
+    "pending_jobs": 0,
+    "status_message": "active"
+  },
+  "gate_mode": "standard",
+  "optimization_level": 3,
+  "transpiler_trials_per_seed": 10,
+  "max_twoq_error_threshold": 0.03,
+  "uses_qpu": false,
+  "submission_allowed": true,
+  "seed_safety": {
+    "2001": true,
+    "2002": true,
+    "2003": true,
+    "2004": true,
+    "2005": true,
+    "2006": true,
+    "2007": true,
+    "2008": true,
+    "2009": true,
+    "2010": true,
+    "2011": true,
+    "2012": true,
+    "2013": true,
+    "2014": true,
+    "2015": true
+  },
+  "all_seeds_pass_calibration_safety": true,
+  "n_prepared_pubs": 15,
+  "files": {
+    "transpile_trials": "nighthawk_curved60rot45_transpile_trials.csv",
+    "best_layouts": "nighthawk_curved60rot45_best_layouts.csv",
+    "candidates": "nighthawk_curved60rot45_candidates.csv",
+    "qpy": "nighthawk_curved60rot45_bound_standard.qpy",
+    "validation": "nighthawk_curved60rot45_preflight_validation.json"
+  },
+  "warning": "Preflight only. Do not submit unless submission_allowed is true and the validation has been reviewed.",
+  "validated_immediately_before_submission_utc": "2026-07-19T12:28:28.951097+00:00",
+  "backend_live": {
+    "backend": "ibm_berlin",
+    "operational": true,
+    "pending_jobs": 0,
+    "status_message": "active"
+  },
+  "shots_per_pub": 10000,
+  "total_requested_shots": 150000,
+  "dd": "XY4",
+  "gate_twirling": false,
+  "measurement_twirling": false,
+  "execution_mode": "15_bound_folded_pubs_in_one_runtime_job",
+  "submitted_at_utc": "2026-07-19T12:28:29.911024+00:00",
+  "job_id": "d9ec5r805i9c73a0igpg"
+}

@@ -1,0 +1,63 @@
+{
+  "experiment": "curved_60_degree_phantom",
+  "geometry": "curved_60",
+  "seeds": [
+    2001,
+    2002,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2012,
+    2013,
+    2014,
+    2015
+  ],
+  "angle_strategies": {
+    "hardware_calibrated": {
+      "gamma": 0.7103982796590439,
+      "beta": 1.22628080530017
+    },
+    "transferred_center": {
+      "gamma": 0.7771731744054942,
+      "beta": 1.1743489498936892
+    }
+  },
+  "backend_status": {
+    "backend": "ibm_aachen",
+    "operational": true,
+    "pending_jobs": 0,
+    "status_message": "active"
+  },
+  "gate_mode": "fractional",
+  "optimization_level": 3,
+  "transpiler_trials_per_seed": 10,
+  "max_twoq_error_threshold": 0.03,
+  "uses_qpu": false,
+  "submission_allowed": true,
+  "seed_safety": {
+    "2001": true,
+    "2002": true,
+    "2005": true,
+    "2006": true,
+    "2007": true,
+    "2008": true,
+    "2009": true,
+    "2010": true,
+    "2012": true,
+    "2013": true,
+    "2014": true,
+    "2015": true
+  },
+  "all_seeds_pass_calibration_safety": true,
+  "n_prepared_pubs": 24,
+  "files": {
+    "transpile_trials": "curved60_transpile_trials.csv",
+    "best_layouts": "curved60_best_layouts.csv",
+    "candidates": "curved60_candidates.csv",
+    "qpy": "curved60_bound_folded.qpy"
+  },
+  "warning": "Preflight only. Do not submit unless submission_allowed is true and the validation has been reviewed."
+}

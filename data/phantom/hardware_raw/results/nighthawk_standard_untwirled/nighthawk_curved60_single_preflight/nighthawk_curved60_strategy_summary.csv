@@ -1,0 +1,2 @@
+angle_strategy,n_seeds,mean_hardware_expected_gap,sd_hardware_expected_gap,mean_hardware_cvar10_gap,mean_hardware_best_gap,mean_hardware_best_label_accuracy,mean_best_agreement_with_exact,total_exact_ground_hits,mean_ideal_expected_gap
+nighthawk_calibrated,15,0.44995300397734656,0.024388854322688162,0.2488938936443609,0.09812519373732057,0.656,0.6853333333333332,0,0.30288284932841025
