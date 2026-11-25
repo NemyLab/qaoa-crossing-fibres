@@ -1,12 +1,12 @@
 # Hardware-aware QAOA for crossing-fibre reconstruction in diffusion MRI
 
-Code and public reproducibility materials accompanying the manuscript by Milan Nemy, Daniel Ferreira and Josef Sivic.
+Code and public reproducibility materials accompanying the manuscript by Milan Nemy and Daniel Ferreira.
 
 ## Scope
 
 This repository contains the code used to construct the crossing-fibre Ising problems, run the depth-one QAOA simulations/hardware workflows, reproduce the controlled phantom experiments, perform the finite-budget classical controls, and reproduce the analysis/figure-generation steps. It also contains the public numerical outputs for the synthetic phantom and classical-control experiments.
 
-**HCP-YA subject-level data and HCP-derived subject-level files are intentionally not redistributed in this public repository.** Users who wish to reproduce the human-data analyses must obtain HCP-YA data through ConnectomeDB and accept the WU-Minn HCP Open Access Data Use Terms. See `docs/HCP_REPRODUCTION.md`.
+**HCP-YA imaging data are not redistributed in this repository.** A small set of numerical results and 2D renderings derived from HCP-YA Open Access data is included in `data/hcp/` and is redistributed under the WU-Minn HCP Open Access Data Use Terms (see [`data/hcp/HCP_DATA_USE_TERMS.md`](data/hcp/HCP_DATA_USE_TERMS.md)). Users who wish to reproduce the human-data analyses from the images must obtain HCP-YA data through ConnectomeDB and accept the same terms. See `docs/HCP_REPRODUCTION.md`.
 
 ## Repository layout
 
@@ -56,16 +56,16 @@ Known gaps: raw phantom QPU bitstrings, transpiled circuits (QPY) and backend ca
 
 The human-data workflow uses HCP-YA data obtained under the WU-Minn HCP Open Access Data Use Terms. The exact HCP-YA subjects and diffusion-grid patch centres used in the 30-subject analysis are listed in [`data/hcp/hcp_patch_manifest.csv`](data/hcp/hcp_patch_manifest.csv). The representative case used in the manuscript is subject 103414, with the 5×5 patch centred at diffusion-grid voxel (88, 86, 76).
 
-This public repository does not redistribute HCP imaging data, subject-level HCP-derived graph tables, bitstrings or participant-level outputs. See [`docs/HCP_REPRODUCTION.md`](docs/HCP_REPRODUCTION.md) for reproduction instructions.
+This repository does not redistribute HCP imaging data or the per-patch graphs of the 30-subject analysis. As derived data under the WU-Minn HCP Open Access Data Use Terms, it includes the per-participant summary metrics of the 30-subject analysis ([`data/hcp/hcp_subject_level_results.csv`](data/hcp/hcp_subject_level_results.csv)) and, for the representative subject 103414, the 50-node graph, its exact solution, the 10,000 Heron bitstrings and the 2D renderings used in Figures 1 and 3 ([`data/hcp/representative_103414/`](data/hcp/representative_103414)). See [`docs/HCP_REPRODUCTION.md`](docs/HCP_REPRODUCTION.md) for reproduction instructions.
 
 ## Citation
 
 If you use this code, synthetic data, or associated reproducibility materials, please cite the accompanying manuscript:
 
-Nemy, M., Ferreira, D., & Sivic, J. Hardware-aware QAOA for crossing-fibre reconstruction in diffusion MRI. Manuscript in preparation.
+Nemy, M. & Ferreira, D. Hardware-aware QAOA for crossing-fibre reconstruction in diffusion MRI. Manuscript in preparation.
 
 ## License
 
 The source code in this repository is released under the MIT License.
 
-The repository contains only publicly redistributable code, synthetic phantom data, and derived numerical results. Human Connectome Project Young Adult (HCP-YA) participant-level data and subject-derived files are not redistributed here. Access to the original HCP-YA data is subject to the WU–Minn HCP Data Use Terms.
+The repository contains only publicly redistributable code, synthetic phantom data, and derived numerical results. Human Connectome Project Young Adult (HCP-YA) imaging data are not redistributed here. The HCP-derived files in `data/hcp/` are not covered by the MIT License; they are redistributed under the WU–Minn HCP Open Access Data Use Terms, which also govern access to the original HCP-YA data.
