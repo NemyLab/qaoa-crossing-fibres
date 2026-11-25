@@ -9,6 +9,11 @@ authors:
   - family-names: Ferreira
     given-names: Daniel
     affiliation: "Karolinska Institutet; Universidad Fernando Pessoa Canarias"
+doi: 10.5281/zenodo.24536852
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.24536852
+    description: "Zenodo archive of release v1.0.0"
 license: MIT
 repository-code: "https://github.com/NemyLab/qaoa-crossing-fibres"
 keywords:
