@@ -1,5 +1,7 @@
 # Hardware-aware QAOA for crossing-fibre reconstruction in diffusion MRI
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24536852.svg)](https://doi.org/10.5281/zenodo.24536852)
+
 Code and public reproducibility materials accompanying the manuscript by Milan Nemy and Daniel Ferreira.
 
 ## Scope
@@ -48,7 +50,7 @@ The tests import the offline modules and confirm that phantom seed 2001 (90°, o
 
 ## Hardware results
 
-The repository preserves scripts for the IBM Heron (`ibm_aachen`) and Nighthawk (`ibm_berlin`) workflows. Re-running on current hardware will not reproduce historical calibration states exactly. Hardware job outputs should therefore be interpreted together with the archived manuscript results/DOI release rather than as deterministic unit tests. No IBM credentials are stored in this repository.
+The repository preserves scripts for the IBM Heron (`ibm_aachen`) and Nighthawk (`ibm_berlin`) workflows. Re-running on current hardware will not reproduce historical calibration states exactly. Hardware job outputs should therefore be interpreted together with the archived v1.0.0 release (https://doi.org/10.5281/zenodo.24536852) rather than as deterministic unit tests. No IBM credentials are stored in this repository.
 
 Raw phantom outputs: the bitstring counts, submitted transpiled circuits (QPY), transpilation trials with the contemporaneous calibration errors used for circuit selection, and job metadata of all phantom calibration and evaluation runs on both processors are in [`data/phantom/hardware_raw/`](data/phantom/hardware_raw) (see its README, which also gives the command that reproduces the Heron-versus-Nighthawk comparison). The higher-curvature Heron run is in [`data/phantom/step19_hardware/`](data/phantom/step19_hardware). Full-processor calibration snapshots summarized in Supplementary Table 1 are not included. `src/hardware/heron/step10_transpile_preflight.py` contains only the helper metrics imported by the replication workflow.
 
@@ -63,6 +65,10 @@ This repository does not redistribute HCP imaging data or the per-patch graphs o
 If you use this code, synthetic data, or associated reproducibility materials, please cite the accompanying manuscript:
 
 Nemy, M. & Ferreira, D. Hardware-aware QAOA for crossing-fibre reconstruction in diffusion MRI. Manuscript in preparation.
+
+The version used in the manuscript is archived at Zenodo:
+
+Nemy, M. & Ferreira, D. Code and data for "Hardware-aware QAOA for crossing-fibre reconstruction in diffusion MRI" (v1.0.0). Zenodo https://doi.org/10.5281/zenodo.24536852 (2026).
 
 ## License
 
