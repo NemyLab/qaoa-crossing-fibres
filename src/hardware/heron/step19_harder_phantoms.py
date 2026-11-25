@@ -369,10 +369,88 @@ def counts_from_pub(pub_result, circuit) -> dict[str, int]:
     return {str(k): int(v) for k, v in raw.items()}
 
 
+GRAPHS_FILE = 'graphs.json.gz'
+
+
+def graph_to_record(graph) -> dict:
+    return {
+        'nodes': graph.nodes.to_dict(orient='list'),
+        'edges': graph.edges.to_dict(orient='list'),
+        'fields': np.asarray(graph.fields, dtype=float).tolist(),
+        'true_spins': np.asarray(graph.true_spins, dtype=int).tolist(),
+        'grid_size': int(graph.grid_size), 'seed': int(graph.seed),
+    }
+
+
+def graph_from_record(record: dict):
+    from step1_crossing_graph import CrossingGraph
+    return CrossingGraph(
+        nodes=pd.DataFrame(record['nodes']), edges=pd.DataFrame(record['edges']),
+        fields=np.asarray(record['fields'], dtype=float),
+        true_spins=np.asarray(record['true_spins'], dtype=int),
+        grid_size=int(record['grid_size']), seed=int(record['seed']),
+    )
+
+
+def load_graphs(out: Path) -> dict[int, object] | None:
+    """Graphs exactly as they were built on the machine that prepared the job.
+
+    Peak extraction is a fit on a 2-degree orientation dictionary. In a few voxels of the
+    high-curvature geometries two candidate axes fit almost equally well, so floating-point
+    differences between platforms (BLAS, NumPy/SciPy versions) can change a peak and hence
+    an edge weight or a reference label. Re-analysis therefore uses the stored graphs when
+    they are available instead of regenerating them.
+    """
+    path = out / GRAPHS_FILE
+    if not path.exists():
+        return None
+    with gzip.open(path, 'rt', encoding='utf-8') as handle:
+        payload = json.load(handle)
+    return {int(k): graph_from_record(v) for k, v in payload['graphs_by_pub_index'].items()}
+
+
+def cmd_export_graphs(args) -> None:
+    """Write the graphs of the frozen design, as built on this machine, next to the run."""
+    import platform
+    import scipy
+    candidates = pd.read_csv(args.out / 'candidates.csv') if (args.out / 'candidates.csv').exists() else None
+    graphs, checks = {}, []
+    for pub_index, (geometry, seed, _role) in enumerate(DESIGN):
+        graph, _ = build_graph(geometry, seed)
+        spins, energy, _ = exact_milp(graph)
+        record = graph_to_record(graph)
+        record['exact_spins'] = np.asarray(spins, dtype=int).tolist()
+        record['exact_energy'] = float(energy)
+        graphs[str(pub_index)] = record
+        if candidates is not None:
+            stored = float(candidates.loc[candidates['pub_index'] == pub_index, 'exact_energy'].iloc[0])
+            checks.append(abs(stored - float(energy)))
+    payload = {
+        'exported_at_utc': datetime.now(timezone.utc).isoformat(),
+        'platform': platform.platform(), 'python': platform.python_version(),
+        'numpy': np.__version__, 'scipy': scipy.__version__, 'pandas': pd.__version__,
+        'graphs_by_pub_index': graphs,
+    }
+    with gzip.open(args.out / GRAPHS_FILE, 'wt', encoding='utf-8') as handle:
+        json.dump(payload, handle)
+    if checks:
+        worst = max(checks)
+        print(f'max |exact energy - candidates.csv| = {worst:.2e}')
+        if worst > 1e-6:
+            raise RuntimeError('Graphs differ from the prepared run; export on the machine that ran prepare')
+    print(f'Wrote {args.out / GRAPHS_FILE} ({len(graphs)} graphs)')
+
+
 def analyse(out: Path, candidates: pd.DataFrame, counts_by_pub: dict[int, dict], label: str) -> None:
+    stored = load_graphs(out)
+    if stored is None:
+        print('No stored graphs; regenerating them on this machine.', flush=True)
     rows = []
     for row in candidates.itertuples(index=False):
-        graph, _ = build_graph(row.geometry, int(row.seed))
+        if stored is not None:
+            graph = stored[int(row.pub_index)]
+        else:
+            graph, _ = build_graph(row.geometry, int(row.seed))
         counts = counts_by_pub[int(row.pub_index)]
         qpu = sample_metrics(counts, graph, float(row.exact_energy))
         shots = qpu['shots']
@@ -431,6 +509,15 @@ def cmd_collect(args) -> None:
     analyse(args.out, candidates, counts, 'hardware')
 
 
+def cmd_reanalyse(args) -> None:
+    """Recompute all metrics from saved counts, without IBM access."""
+    candidates = pd.read_csv(args.out / 'candidates.csv')
+    with gzip.open(args.out / 'hardware_counts.json.gz', 'rt', encoding='utf-8') as handle:
+        payload = json.load(handle)
+    counts = {int(k): v for k, v in payload['counts_by_pub_index'].items()}
+    analyse(args.out, candidates, counts, args.label)
+
+
 def cmd_simulate(args) -> None:
     """Noiseless check of the analysis path using Aer MPS on the logical circuits."""
     from qiskit_aer import AerSimulator
@@ -467,12 +554,18 @@ def main() -> None:
     s.add_argument('--submit', action='store_true')
     c = sub.add_parser('collect')
     c.add_argument('--out', type=Path, required=True)
+    e = sub.add_parser('export-graphs')
+    e.add_argument('--out', type=Path, required=True)
+    r = sub.add_parser('reanalyse')
+    r.add_argument('--out', type=Path, required=True)
+    r.add_argument('--label', default='hardware_reanalysed')
     m = sub.add_parser('simulate')
     m.add_argument('--out', type=Path, required=True)
     m.add_argument('--shots', type=int, default=10_000)
     args = parser.parse_args()
     {'prepare': cmd_prepare, 'submit': cmd_submit, 'collect': cmd_collect,
-     'simulate': cmd_simulate}[args.cmd](args)
+     'simulate': cmd_simulate, 'export-graphs': cmd_export_graphs,
+     'reanalyse': cmd_reanalyse}[args.cmd](args)
 
 
 if __name__ == '__main__':
